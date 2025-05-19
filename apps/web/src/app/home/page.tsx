@@ -1,13 +1,16 @@
 import ApplySong from '@/components/home/ApplySong'
 import SetListTable from '@/components/home/SetListTable'
 import Link from 'next/link'
-
+import Image from 'next/image'
 export default function Page() {
   return (
     <div className="w-full h-full flex flex-col px-4 overflow-hidden bg-amber-200/70">
-      <header className="w-full space-y-3 text-center pb-4 pt-12">
-        <h1 className="text-5xl font-bold">노래 버스킹</h1>
-        <p className="text-2xl font-bold">오늘의 셋 리스트</p>
+      <header className="w-full space-y-2 flex items-center justify-center gap-3 pb-2 pt-8">
+        <Image src="/images/NONAME_LOGO.jpeg" alt="logo" width={100} height={100} />
+        <div>
+          <h1 className="text-4xl font-bold">노래 버스킹</h1>
+          <p className="text-xl font-bold">오늘의 셋 리스트</p>
+        </div>
       </header>
       <div className="w-full flex-1 flex flex-col rounded-2xl bg-yellow-50">
         <SetListTable />
