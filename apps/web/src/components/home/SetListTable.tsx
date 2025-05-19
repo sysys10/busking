@@ -13,7 +13,11 @@ export default function SetListTable() {
   useEffect(() => {
     const fetchSetList = async () => {
       const supabase = supabaseClient()
-      const { data, error } = await supabase.from('setLists').select('*')
+      const { data, error } = await supabase
+        .from('setLists')
+        .select('*')
+        .eq('isAvaible', true)
+        .order('order', { ascending: true })
       if (error) {
         console.error(error)
       } else {
