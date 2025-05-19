@@ -4,13 +4,15 @@ import Link from 'next/link'
 import Image from 'next/image'
 export default function Page() {
   return (
-    <div className="w-full h-full flex flex-col px-4 overflow-hidden bg-amber-200/70">
-      <header className="w-full space-y-2 flex items-center justify-center gap-3 pb-2 pt-8">
-        <Image src="/images/NONAME_LOGO.jpeg" alt="logo" width={100} height={100} />
-        <div>
-          <h1 className="text-4xl font-bold">노래 버스킹</h1>
-          <p className="text-xl font-bold">오늘의 셋 리스트</p>
+    <div className="w-full h-full flex flex-col px-4 overflow-hidden bg-main-bg">
+      <header className="w-full pb-2 pt-8 text-center">
+        <div className="flex items-center justify-center gap-3">
+          <Image src="/images/NONAME_LOGO.jpeg" alt="logo" width={100} height={100} />
+          <div>
+            <h1 className="text-4xl font-bold">노래 버스킹</h1>
+          </div>
         </div>
+        <p className="text-xl font-bold">오늘의 셋 리스트</p>
       </header>
       <div className="w-full flex-1 flex flex-col rounded-2xl bg-yellow-50">
         <SetListTable />
@@ -59,7 +61,6 @@ function Footer() {
         </Link>
         <p className="text-xl font-medium">팔로우하기</p>
       </div>
-      <p className="text-sm font-medium">3333341145508 카카오뱅크(Team Noname)</p>
     </footer>
   )
 }

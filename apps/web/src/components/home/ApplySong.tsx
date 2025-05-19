@@ -42,7 +42,7 @@ export default function ApplySong() {
   }
 
   return (
-    <div className="w-full bg-white rounded-b-2xl flex flex-col gap-2 px-4 py-2">
+    <div className="w-full rounded-b-2xl flex flex-col gap-2 px-4 py-2">
       <Button onClick={() => setIsOpen(true)} className="text-lg">
         노래 신청하기
       </Button>
