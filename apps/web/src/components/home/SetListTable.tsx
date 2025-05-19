@@ -1,0 +1,42 @@
+'use client'
+
+import supabaseClient from '@/lib/supabase'
+import { useEffect, useState } from 'react'
+type SetList = {
+  id: number
+  title: string
+  singer: string
+  order: number
+}
+export default function SetListTable() {
+  const [setList, setSetList] = useState<SetList[]>([])
+  useEffect(() => {
+    const fetchSetList = async () => {
+      const supabase = supabaseClient()
+      const { data, error } = await supabase.from('setLists').select('*')
+      if (error) {
+        console.error(error)
+      } else {
+        setSetList(data)
+      }
+    }
+    fetchSetList()
+  }, [])
+  return (
+    <div className="w-full p-4 flex-1 overflow-hidden">
+      <div className="w-full divide-y">
+        {setList.length > 0 ? (
+          setList.map((item, idx) => (
+            <div key={item.id} className="grid grid-cols-12 py-3 items-center">
+              <div className="col-span-2 text-center">{idx + 1}</div>
+              <div className="col-span-7">{item.title}</div>
+              <div className="col-span-3 text-gray-600">{item.singer}</div>
+            </div>
+          ))
+        ) : (
+          <div className="py-4 text-center text-gray-500">아직 셋 리스트가 없습니다.</div>
+        )}
+      </div>
+    </div>
+  )
+}
