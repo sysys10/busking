@@ -22,13 +22,12 @@ export default function ApplySong() {
         {
           title,
           singer,
-          order: Math.floor(Math.random() * 100), // 임시 순서 번호
+          order: 0,
         },
       ])
 
       if (error) throw error
 
-      // 성공 후 입력 필드 초기화
       setTitle('')
       setSinger('')
       alert('신청이 완료되었습니다!')
