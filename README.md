@@ -5,7 +5,7 @@
 
 # 노래 버스킹 관리 시스템 🎵
 
-노래 버스킹을 위한 신청곡 관리 시스템입니다. 관객들이 노래를 신청하고, 관리자가 이를 효율적으로 관리할 수 있는 웹 애플리케이션입니다.
+간단하게 만든 노래 버스킹을 위한 신청곡 관리 시스템입니다. 관객들이 노래를 신청하고, 관리자가 이를 효율적으로 관리할 수 있는 웹 애플리케이션입니다.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/%3C%2F%3E-TypeScript-%230074c1.svg)](https://www.typescriptlang.org/)
