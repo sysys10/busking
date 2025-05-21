@@ -43,7 +43,7 @@ function Footer() {
             <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
           </svg>
         </Link>
-        <Link href="https://youtube.com/@joinscvable?si=Nfui-DmaAMW3ppif">
+        <Link href="https://www.youtube.com/@%EB%AC%B4%EB%AA%850525">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -59,7 +59,6 @@ function Footer() {
             <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
           </svg>
         </Link>
-        <p className="text-xl font-medium">팔로우하기</p>
       </div>
     </footer>
   )

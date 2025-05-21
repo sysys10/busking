@@ -44,7 +44,7 @@ export default function SetListTable() {
         </div>
       </div>
       <div className="text-base font-medium text-center">
-        <p className="select-all">3333341145508 카카오뱅크(Team Noname)</p>
+        <p className="select-all">3333-13-1347021 카카오뱅크(Team Noname)</p>
       </div>
     </div>
   )
