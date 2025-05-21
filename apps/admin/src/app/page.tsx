@@ -92,7 +92,7 @@ function SortableCard({
             item.isAvaible ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
           }`}
         >
-          {item.isAvaible ? '연주 가능' : '연주 불가'}
+          {item.isAvaible ? '공연 가능' : '공연 불가'}
         </span>
       </div>
 
@@ -136,8 +136,8 @@ function SortableCard({
               onChange={(e) => setEditForm({ ...editForm, isAvaible: e.target.value === 'true' })}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
-              <option value="true">연주 가능</option>
-              <option value="false">연주 불가</option>
+              <option value="true">공연 가능</option>
+              <option value="false">공연 불가</option>
             </select>
           </div>
           <div className="flex space-x-2 pt-2">

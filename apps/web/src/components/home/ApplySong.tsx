@@ -13,25 +13,43 @@ export default function ApplySong() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-
+  
     if (!title || !singer) return
-
+  
     setIsSubmitting(true)
-
+  
     try {
       const supabase = supabaseClient()
+  
+      // 현재 최대 order 값 가져오기
+      const { data: lastItem, error: fetchError } = await supabase
+        .from('setLists')
+        .select('order')
+        .order('order', { ascending: false })
+        .limit(1)
+  
+      if (fetchError) throw fetchError
+  
+      const maxOrder = lastItem?.[0]?.order ?? 0
+      const newOrder = maxOrder + 1
+  
+      // 새 곡 삽입
       const { error } = await supabase.from('setLists').insert([
         {
           title,
           singer,
-          order: 0,
+          vocal: vocal || null,
+          order: newOrder,
+          isAvaible: true, // 기본값 설정 (옵션)
         },
       ])
-
+  
       if (error) throw error
-
+  
       setTitle('')
       setSinger('')
+      setVocal('')
+      setName('')
       alert('신청이 완료되었습니다!')
     } catch (error) {
       console.error('신청 중 오류가 발생했습니다:', error)
