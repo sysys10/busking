@@ -7,6 +7,7 @@ type SetList = {
   title: string
   singer: string
   order: number
+  vocal: string | null
 }
 export default function SetListTable() {
   const [setList, setSetList] = useState<SetList[]>([])
@@ -35,7 +36,9 @@ export default function SetListTable() {
               <div key={item.id} className="grid grid-cols-12 py-3 items-center">
                 <div className="col-span-2 text-center">{idx + 1}</div>
                 <div className="col-span-7">{item.title}</div>
-                <div className="col-span-3 text-gray-600">{item.singer}</div>
+                <div className="col-span-3 text-gray-600">
+                  {item.singer} ({item.vocal})
+                </div>
               </div>
             ))
           ) : (
